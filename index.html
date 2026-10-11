@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Huellitas Clínica Veterinaria en Querétaro, consultas, vacunas, estética y urgencias para tu mascota.">
+  <title>Huellitas | Clínica Veterinaria</title>
+  <link rel="icon" href="img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <!-- Plugin bxSlider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- Encabezado con fecha, hora y menú de navegación -->
+  <header class="encabezado">
+    <div class="barra-superior">
+      <div class="contenedor">
+        <span id="fecha-hora">Cargando fecha...</span>
+        <span>Urgencias 24 horas · 442 215 3080</span>
+      </div>
+    </div>
+    <nav class="nav contenedor">
+      <a href="index.html" class="logo"><img src="img/logo.svg" alt="Logo de Huellitas"><b>Huell<span>itas</span></b></a>
+      <ul class="menu">
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="acciones-nav">
+        <button id="btn-tema" class="btn-icono" aria-label="Cambiar tema">🌙</button>
+        <button class="btn-icono menu-toggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Slider principal con bxSlider -->
+    <section class="hero">
+      <div class="contenedor">
+        <ul class="slider-principal">
+          <li class="slide">
+            <img src="img/slide1.svg" alt="Perro feliz en consulta">
+            <div class="slide-texto">
+              <h1>Cuidamos a quien te cuida</h1>
+              <p>Medicina veterinaria con cariño para perros y gatos en Querétaro.</p>
+              <a href="contacto.html" class="boton">Agenda tu cita</a>
+            </div>
+          </li>
+          <li class="slide">
+            <img src="img/slide2.svg" alt="Gato en revisión">
+            <div class="slide-texto">
+              <h2>Vacunas al día</h2>
+              <p>Llevamos el control de su cartilla y te avisamos cuando toca el refuerzo.</p>
+              <a href="servicios.html" class="boton">Ver servicios</a>
+            </div>
+          </li>
+          <li class="slide">
+            <img src="img/slide3.svg" alt="Clínica Huellitas">
+            <div class="slide-texto">
+              <h2>Urgencias las 24 horas</h2>
+              <p>Siempre hay un médico de guardia listo para atender a tu mascota.</p>
+              <a href="contacto.html" class="boton">Cómo llegar</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="etiqueta">Por qué elegirnos</span>
+          <h2>Una clínica pensada para tu mascota</h2>
+          <p>Somos un equipo de médicos que trata a cada paciente como si fuera parte de la familia.</p>
+        </div>
+        <div class="rejilla">
+          <article class="tarjeta">
+            <div class="icono">🩺</div>
+            <h3>Médicos certificados</h3>
+            <p>Todo nuestro equipo tiene cédula profesional y se capacita cada año.</p>
+          </article>
+          <article class="tarjeta">
+            <div class="icono">🏥</div>
+            <h3>Equipo moderno</h3>
+            <p>Contamos con rayos X digital, ultrasonido y laboratorio propio.</p>
+          </article>
+          <article class="tarjeta">
+            <div class="icono">💛</div>
+            <h3>Trato amable</h3>
+            <p>Consultorios tranquilos para que tu mascota no se estrese en la visita.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contadores animados con jQuery -->
+    <section class="contenedor">
+      <div class="contadores">
+        <div><div class="contador" data-final="12">0</div><p>Años de experiencia</p></div>
+        <div><div class="contador" data-final="8500">0</div><p>Mascotas atendidas</p></div>
+        <div><div class="contador" data-final="9">0</div><p>Médicos veterinarios</p></div>
+        <div><div class="contador" data-final="24">0</div><p>Horas de urgencias</p></div>
+      </div>
+    </section>
+
+    <!-- Funcionalidad extra: calculadora de edad -->
+    <section class="seccion">
+      <div class="contenedor calculadora">
+        <div>
+          <span class="etiqueta">Herramienta</span>
+          <h2 class="titulo-calc">¿Cuántos años humanos tiene tu mascota?</h2>
+          <p>Los perros y gatos crecen mucho más rápido que nosotros. Escribe la edad de tu mascota y te decimos su edad equivalente en años humanos y la etapa de vida en la que está.</p>
+        </div>
+        <form id="form-edad" novalidate>
+          <div class="campo">
+            <label for="especie">Especie</label>
+            <select id="especie">
+              <option value="perro">Perro</option>
+              <option value="gato">Gato</option>
+            </select>
+          </div>
+          <div class="campo" id="campo-tamano">
+            <label for="tamano">Tamaño</label>
+            <select id="tamano">
+              <option value="chico">Chico, menos de 10 kg</option>
+              <option value="mediano">Mediano, de 10 a 25 kg</option>
+              <option value="grande">Grande, más de 25 kg</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="edad">Edad en años</label>
+            <input type="number" id="edad" min="1" max="25" placeholder="Ejemplo 4">
+            <div class="mensaje-error" id="error-edad"></div>
+          </div>
+          <button type="submit" class="boton boton-secundario">Calcular</button>
+          <div class="resultado-edad" id="resultado-edad"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="pie">
+    <div class="contenedor pie-grid">
+      <div>
+        <h3>Huellitas Clínica Veterinaria</h3>
+        <p>Atención médica para perros y gatos en el centro de Querétaro desde 2014.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horario</h3>
+        <p>Lunes a sábado de 9:00 a 20:00</p>
+        <p>Domingo de 10:00 a 14:00</p>
+        <p>Urgencias 24 horas</p>
+      </div>
+    </div>
+    <div class="contenedor pie-final">
+      © <span class="anio"></span> Huellitas · Sitio hecho por Carlos Becerra Zúñiga · 00519126
+    </div>
+  </footer>
+
+  <button id="btn-arriba" aria-label="Ir arriba">↑</button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+  <script src="js/principal.js"></script>
+  <script src="js/inicio.js"></script>
+</body>
+</html>
