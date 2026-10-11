@@ -80,11 +80,11 @@ $('#mensaje').on('input', function () {
 // Mapa
 const mapa = L.map('mapa').setView([20.5937, -100.3926], 16);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap'
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Mapa © Esri'
 }).addTo(mapa);
 
 L.marker([20.5937, -100.3926])
   .addTo(mapa)
-  .bindPopup('<strong>Huellitas</strong><br>Av. Zaragoza 215, Centro')
+  .bindPopup('<strong>Huellitas</strong><br>Av. Corregidora Sur 215, Centro')
   .openPopup();

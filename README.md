@@ -27,7 +27,7 @@ Sitio web de una clínica veterinaria ficticia ubicada en el centro de Querétar
 
 **Plugins y librerías**
 - bxSlider 4.2.15 para el carrusel de inicio y los testimonios
-- Leaflet 1.9.4 con OpenStreetMap para el mapa
+- Leaflet 1.9.4 con los mapas de Esri para el mapa
 - Font Awesome 6.5.2 para los íconos
 
 ## Estructura
