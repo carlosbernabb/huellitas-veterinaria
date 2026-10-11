@@ -8,8 +8,8 @@
   <link rel="icon" href="img/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
-  <!-- Leaflet para el mapa interactivo -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -17,8 +17,8 @@
   <header class="encabezado">
     <div class="barra-superior">
       <div class="contenedor">
-        <span id="fecha-hora">Cargando fecha...</span>
-        <span>Urgencias 24 horas · 442 215 3080</span>
+        <span><i class="fa-regular fa-clock"></i> <span id="fecha-hora">Cargando fecha...</span></span>
+        <span><i class="fa-solid fa-phone"></i> Urgencias 24 horas · 442 215 3080</span>
       </div>
     </div>
     <nav class="nav contenedor">
@@ -30,8 +30,8 @@
         <li><a href="contacto.html" class="activo">Contacto</a></li>
       </ul>
       <div class="acciones-nav">
-        <button id="btn-tema" class="btn-icono" aria-label="Cambiar tema">🌙</button>
-        <button class="btn-icono menu-toggle" aria-label="Abrir menú">☰</button>
+        <button id="btn-tema" class="btn-icono" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn-icono menu-toggle" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
       </div>
     </nav>
   </header>
@@ -46,7 +46,7 @@
 
     <section class="seccion">
       <div class="contenedor contacto-grid">
-        <!-- Formulario validado con JavaScript -->
+        <!-- Formulario -->
         <form id="form-contacto" class="tarjeta" novalidate>
           <h2 class="titulo-calc">Envíanos un mensaje</h2>
           <div class="aviso-exito" id="aviso-exito"></div>
@@ -84,15 +84,15 @@
         <!-- Datos y mapa -->
         <div class="datos-contacto">
           <div class="dato">
-            <div class="icono">📍</div>
+            <div class="icono"><i class="fa-solid fa-location-dot"></i></div>
             <div><strong>Dirección</strong><p>Av. Zaragoza 215, Centro, Santiago de Querétaro</p></div>
           </div>
           <div class="dato">
-            <div class="icono">📞</div>
+            <div class="icono"><i class="fa-solid fa-phone"></i></div>
             <div><strong>Teléfono</strong><p>442 215 3080</p></div>
           </div>
           <div class="dato">
-            <div class="icono">✉️</div>
+            <div class="icono"><i class="fa-solid fa-envelope"></i></div>
             <div><strong>Correo</strong><p>hola@huellitasvet.mx</p></div>
           </div>
           <div id="mapa" aria-label="Mapa con la ubicación de la clínica"></div>
@@ -124,11 +124,11 @@
       </div>
     </div>
     <div class="contenedor pie-final">
-      © <span class="anio"></span> Huellitas · Sitio hecho por Carlos Becerra Zúñiga · 00519126
+      © 2026 Huellitas · Carlos Becerra Zúñiga · 00519126
     </div>
   </footer>
 
-  <button id="btn-arriba" aria-label="Ir arriba">↑</button>
+  <button id="btn-arriba" aria-label="Ir arriba"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

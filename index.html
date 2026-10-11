@@ -8,18 +8,18 @@
   <link rel="icon" href="img/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
-  <!-- Plugin bxSlider -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-  <!-- Encabezado con fecha, hora y menú de navegación -->
+  <!-- Encabezado -->
   <header class="encabezado">
     <div class="barra-superior">
       <div class="contenedor">
-        <span id="fecha-hora">Cargando fecha...</span>
-        <span>Urgencias 24 horas · 442 215 3080</span>
+        <span><i class="fa-regular fa-clock"></i> <span id="fecha-hora">Cargando fecha...</span></span>
+        <span><i class="fa-solid fa-phone"></i> Urgencias 24 horas · 442 215 3080</span>
       </div>
     </div>
     <nav class="nav contenedor">
@@ -31,14 +31,14 @@
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
       <div class="acciones-nav">
-        <button id="btn-tema" class="btn-icono" aria-label="Cambiar tema">🌙</button>
-        <button class="btn-icono menu-toggle" aria-label="Abrir menú">☰</button>
+        <button id="btn-tema" class="btn-icono" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn-icono menu-toggle" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
       </div>
     </nav>
   </header>
 
   <main>
-    <!-- Slider principal con bxSlider -->
+    <!-- Slider -->
     <section class="hero">
       <div class="contenedor">
         <ul class="slider-principal">
@@ -80,17 +80,17 @@
         </div>
         <div class="rejilla">
           <article class="tarjeta">
-            <div class="icono">🩺</div>
+            <div class="icono"><i class="fa-solid fa-stethoscope"></i></div>
             <h3>Médicos certificados</h3>
             <p>Todo nuestro equipo tiene cédula profesional y se capacita cada año.</p>
           </article>
           <article class="tarjeta">
-            <div class="icono">🏥</div>
+            <div class="icono"><i class="fa-solid fa-hospital"></i></div>
             <h3>Equipo moderno</h3>
             <p>Contamos con rayos X digital, ultrasonido y laboratorio propio.</p>
           </article>
           <article class="tarjeta">
-            <div class="icono">💛</div>
+            <div class="icono"><i class="fa-solid fa-heart"></i></div>
             <h3>Trato amable</h3>
             <p>Consultorios tranquilos para que tu mascota no se estrese en la visita.</p>
           </article>
@@ -98,7 +98,7 @@
       </div>
     </section>
 
-    <!-- Contadores animados con jQuery -->
+    <!-- Contadores -->
     <section class="contenedor">
       <div class="contadores">
         <div><div class="contador" data-final="12">0</div><p>Años de experiencia</p></div>
@@ -108,7 +108,7 @@
       </div>
     </section>
 
-    <!-- Funcionalidad extra: calculadora de edad -->
+    <!-- Calculadora de edad -->
     <section class="seccion">
       <div class="contenedor calculadora">
         <div>
@@ -144,7 +144,7 @@
     </section>
   </main>
 
-  <!-- Pie de página -->
+  <!-- Footer -->
   <footer class="pie">
     <div class="contenedor pie-grid">
       <div>
@@ -168,11 +168,11 @@
       </div>
     </div>
     <div class="contenedor pie-final">
-      © <span class="anio"></span> Huellitas · Sitio hecho por Carlos Becerra Zúñiga · 00519126
+      © 2026 Huellitas · Carlos Becerra Zúñiga · 00519126
     </div>
   </footer>
 
-  <button id="btn-arriba" aria-label="Ir arriba">↑</button>
+  <button id="btn-arriba" aria-label="Ir arriba"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>

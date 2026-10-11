@@ -1,8 +1,4 @@
-/* ===========================================================
-   Huellitas Clínica Veterinaria - hoja de estilos principal
-   =========================================================== */
-
-/* Variables de color y medidas, se reutilizan en todo el sitio */
+/* Colores */
 :root {
   --primario: #1f7a74;
   --primario-oscuro: #155a55;
@@ -18,7 +14,7 @@
   --ancho: 1150px;
 }
 
-/* Tema oscuro, se activa con la clase oscuro en el body */
+/* Tema oscuro */
 body.oscuro {
   --primario: #4fc1b6;
   --primario-oscuro: #2f9c92;
@@ -33,7 +29,6 @@ body.oscuro {
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 
 
 body {
@@ -97,7 +92,7 @@ h1, h2, h3, .logo {
 .boton-secundario { background: var(--primario); }
 .boton-secundario:hover { box-shadow: 0 8px 20px rgba(31, 122, 116, 0.35); }
 
-/* ---------- Encabezado y menú ---------- */
+/* Encabezado */
 .barra-superior {
   background: var(--primario-oscuro);
   color: #e9f6f4;
@@ -170,7 +165,7 @@ h1, h2, h3, .logo {
 
 .menu-toggle { display: none; }
 
-/* ---------- Slider de inicio con bxSlider ---------- */
+/* Slider */
 .hero { background: linear-gradient(180deg, var(--superficie), var(--fondo)); padding: 30px 0 10px; }
 
 .hero .bx-wrapper {
@@ -199,7 +194,7 @@ h1, h2, h3, .logo {
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active { background: var(--acento); }
 
-/* ---------- Tarjetas ---------- */
+/* Tarjetas */
 .rejilla {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -224,13 +219,14 @@ h1, h2, h3, .logo {
   height: 56px;
   display: grid;
   place-items: center;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  color: var(--acento);
   border-radius: 14px;
   background: var(--acento-suave);
   margin-bottom: 14px;
 }
 
-/* ---------- Contadores ---------- */
+/* Contadores */
 .contadores {
   background: var(--primario);
   color: #fff;
@@ -244,7 +240,7 @@ h1, h2, h3, .logo {
 .contador { font-family: "Baloo 2", sans-serif; font-size: 2.6rem; font-weight: 700; }
 .contadores p { opacity: 0.9; }
 
-/* ---------- Calculadora de edad ---------- */
+/* Calculadora */
 .calculadora {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -268,7 +264,7 @@ h1, h2, h3, .logo {
 }
 .resultado-edad strong { color: var(--acento); font-size: 1.6rem; }
 
-/* ---------- Formularios ---------- */
+/* Formularios */
 .campo { margin-bottom: 16px; }
 .campo label { display: block; font-weight: 800; margin-bottom: 6px; }
 .campo input,
@@ -308,7 +304,7 @@ h1, h2, h3, .logo {
   font-weight: 700;
 }
 
-/* ---------- Nosotros ---------- */
+/* Nosotros */
 .banner-pagina {
   background: linear-gradient(120deg, var(--primario), var(--primario-oscuro));
   color: #fff;
@@ -353,7 +349,7 @@ h1, h2, h3, .logo {
 .testimonio p { font-size: 1.15rem; font-style: italic; margin-bottom: 12px; }
 .testimonio span { font-weight: 800; color: var(--primario); }
 
-/* ---------- Servicios ---------- */
+/* Servicios */
 .herramientas {
   display: flex;
   gap: 16px;
@@ -411,9 +407,11 @@ h1, h2, h3, .logo {
   justify-content: space-between;
 }
 .pregunta .respuesta { display: none; padding: 0 22px 18px; color: var(--texto-suave); }
+.pregunta button i { transition: transform 0.2s; }
 .pregunta.abierta button { color: var(--primario); }
+.pregunta.abierta button i { transform: rotate(45deg); }
 
-/* ---------- Contacto ---------- */
+/* Contacto */
 .contacto-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -429,7 +427,7 @@ h1, h2, h3, .logo {
   z-index: 1;
 }
 
-/* ---------- Pie de página ---------- */
+/* Footer */
 .pie {
   background: #12302d;
   color: #cfe3e0;
@@ -453,7 +451,7 @@ h1, h2, h3, .logo {
   font-size: 0.9rem;
 }
 
-/* ---------- Botón ir arriba ---------- */
+/* Botón ir arriba */
 #btn-arriba {
   position: fixed;
   right: 22px;
@@ -471,7 +469,7 @@ h1, h2, h3, .logo {
   z-index: 60;
 }
 
-/* ---------- Diseño responsivo ---------- */
+/* Responsivo */
 @media (max-width: 960px) {
   .rejilla, .rejilla-4 { grid-template-columns: repeat(2, 1fr); }
   .contadores { grid-template-columns: repeat(2, 1fr); }

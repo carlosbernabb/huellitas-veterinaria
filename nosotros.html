@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -16,8 +17,8 @@
   <header class="encabezado">
     <div class="barra-superior">
       <div class="contenedor">
-        <span id="fecha-hora">Cargando fecha...</span>
-        <span>Urgencias 24 horas · 442 215 3080</span>
+        <span><i class="fa-regular fa-clock"></i> <span id="fecha-hora">Cargando fecha...</span></span>
+        <span><i class="fa-solid fa-phone"></i> Urgencias 24 horas · 442 215 3080</span>
       </div>
     </div>
     <nav class="nav contenedor">
@@ -29,8 +30,8 @@
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
       <div class="acciones-nav">
-        <button id="btn-tema" class="btn-icono" aria-label="Cambiar tema">🌙</button>
-        <button class="btn-icono menu-toggle" aria-label="Abrir menú">☰</button>
+        <button id="btn-tema" class="btn-icono" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn-icono menu-toggle" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
       </div>
     </nav>
   </header>
@@ -66,17 +67,17 @@
         </div>
         <div class="rejilla">
           <article class="tarjeta">
-            <div class="icono">🎯</div>
+            <div class="icono"><i class="fa-solid fa-bullseye"></i></div>
             <h3>Misión</h3>
             <p>Dar atención veterinaria de calidad a un precio justo, cuidando el bienestar de cada mascota y la tranquilidad de su familia.</p>
           </article>
           <article class="tarjeta">
-            <div class="icono">🔭</div>
+            <div class="icono"><i class="fa-solid fa-eye"></i></div>
             <h3>Visión</h3>
             <p>Ser la clínica veterinaria de confianza en Querétaro y promover la tenencia responsable de mascotas.</p>
           </article>
           <article class="tarjeta">
-            <div class="icono">🤝</div>
+            <div class="icono"><i class="fa-solid fa-handshake"></i></div>
             <h3>Valores</h3>
             <p>Respeto por los animales, honestidad con los dueños, trabajo en equipo y aprendizaje constante.</p>
           </article>
@@ -121,7 +122,7 @@
       </div>
     </section>
 
-    <!-- Testimonios con bxSlider -->
+    <!-- Testimonios -->
     <section class="seccion seccion-alt">
       <div class="contenedor">
         <div class="titulo-seccion">
@@ -171,11 +172,11 @@
       </div>
     </div>
     <div class="contenedor pie-final">
-      © <span class="anio"></span> Huellitas · Sitio hecho por Carlos Becerra Zúñiga · 00519126
+      © 2026 Huellitas · Carlos Becerra Zúñiga · 00519126
     </div>
   </footer>
 
-  <button id="btn-arriba" aria-label="Ir arriba">↑</button>
+  <button id="btn-arriba" aria-label="Ir arriba"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>

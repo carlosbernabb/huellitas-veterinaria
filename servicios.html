@@ -8,6 +8,7 @@
   <link rel="icon" href="img/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -15,8 +16,8 @@
   <header class="encabezado">
     <div class="barra-superior">
       <div class="contenedor">
-        <span id="fecha-hora">Cargando fecha...</span>
-        <span>Urgencias 24 horas · 442 215 3080</span>
+        <span><i class="fa-regular fa-clock"></i> <span id="fecha-hora">Cargando fecha...</span></span>
+        <span><i class="fa-solid fa-phone"></i> Urgencias 24 horas · 442 215 3080</span>
       </div>
     </div>
     <nav class="nav contenedor">
@@ -28,8 +29,8 @@
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
       <div class="acciones-nav">
-        <button id="btn-tema" class="btn-icono" aria-label="Cambiar tema">🌙</button>
-        <button class="btn-icono menu-toggle" aria-label="Abrir menú">☰</button>
+        <button id="btn-tema" class="btn-icono" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
+        <button class="btn-icono menu-toggle" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
       </div>
     </nav>
   </header>
@@ -44,7 +45,7 @@
 
     <section class="seccion">
       <div class="contenedor">
-        <!-- Buscador y filtros -->
+        <!-- Buscador -->
         <div class="herramientas">
           <input type="search" id="buscador" class="buscador" placeholder="Busca un servicio, por ejemplo vacuna">
           <div class="filtros">
@@ -58,55 +59,55 @@
 
         <div class="rejilla" id="lista-servicios">
           <article class="tarjeta servicio" data-categoria="salud">
-            <div class="icono">🩺</div>
+            <div class="icono"><i class="fa-solid fa-stethoscope"></i></div>
             <h3>Consulta general</h3>
             <p>Revisión completa de peso, temperatura, corazón, piel, ojos y oídos.</p>
             <p class="precio">$350</p>
           </article>
           <article class="tarjeta servicio" data-categoria="salud">
-            <div class="icono">💉</div>
+            <div class="icono"><i class="fa-solid fa-syringe"></i></div>
             <h3>Vacunación</h3>
             <p>Vacuna múltiple, antirrábica y triple felina con registro en cartilla.</p>
             <p class="precio">Desde $280</p>
           </article>
           <article class="tarjeta servicio" data-categoria="salud">
-            <div class="icono">🪱</div>
+            <div class="icono"><i class="fa-solid fa-shield-dog"></i></div>
             <h3>Desparasitación</h3>
             <p>Interna y externa según el peso y la edad de tu mascota.</p>
             <p class="precio">Desde $150</p>
           </article>
           <article class="tarjeta servicio" data-categoria="salud">
-            <div class="icono">🔬</div>
+            <div class="icono"><i class="fa-solid fa-microscope"></i></div>
             <h3>Laboratorio</h3>
             <p>Análisis de sangre, orina y heces con resultados el mismo día.</p>
             <p class="precio">Desde $420</p>
           </article>
           <article class="tarjeta servicio" data-categoria="salud">
-            <div class="icono">✂️</div>
+            <div class="icono"><i class="fa-solid fa-kit-medical"></i></div>
             <h3>Esterilización</h3>
             <p>Cirugía con anestesia inhalada, monitoreo y collar isabelino incluido.</p>
             <p class="precio">Desde $1,200</p>
           </article>
           <article class="tarjeta servicio" data-categoria="estetica">
-            <div class="icono">🛁</div>
+            <div class="icono"><i class="fa-solid fa-shower"></i></div>
             <h3>Baño y secado</h3>
             <p>Shampoo especial según su tipo de pelo, limpieza de oídos y perfume.</p>
             <p class="precio">Desde $220</p>
           </article>
           <article class="tarjeta servicio" data-categoria="estetica">
-            <div class="icono">💇</div>
+            <div class="icono"><i class="fa-solid fa-scissors"></i></div>
             <h3>Corte de pelo</h3>
             <p>Corte por raza o a tu gusto, incluye corte de uñas.</p>
             <p class="precio">Desde $300</p>
           </article>
           <article class="tarjeta servicio" data-categoria="urgencias">
-            <div class="icono">🚑</div>
+            <div class="icono"><i class="fa-solid fa-truck-medical"></i></div>
             <h3>Urgencias</h3>
             <p>Atención inmediata las 24 horas para accidentes, intoxicaciones y golpes.</p>
             <p class="precio">Desde $600</p>
           </article>
           <article class="tarjeta servicio" data-categoria="urgencias">
-            <div class="icono">🏨</div>
+            <div class="icono"><i class="fa-solid fa-bed-pulse"></i></div>
             <h3>Hospitalización</h3>
             <p>Cuidado y monitoreo por día con médico de guardia toda la noche.</p>
             <p class="precio">$750 por día</p>
@@ -116,7 +117,7 @@
       </div>
     </section>
 
-    <!-- Preguntas frecuentes con acordeón jQuery -->
+    <!-- Preguntas frecuentes -->
     <section class="seccion seccion-alt">
       <div class="contenedor">
         <div class="titulo-seccion">
@@ -125,19 +126,19 @@
         </div>
         <div class="acordeon">
           <div class="pregunta">
-            <button>¿Necesito cita para la consulta? <span>+</span></button>
+            <button>¿Necesito cita para la consulta? <i class="fa-solid fa-plus"></i></button>
             <div class="respuesta">No es obligatorio, pero con cita te atendemos sin esperar. Puedes pedirla por teléfono o desde la página de contacto.</div>
           </div>
           <div class="pregunta">
-            <button>¿Cada cuánto debo vacunar a mi mascota? <span>+</span></button>
+            <button>¿Cada cuánto debo vacunar a mi mascota? <i class="fa-solid fa-plus"></i></button>
             <div class="respuesta">Los cachorros llevan varias dosis en sus primeros meses y después basta con un refuerzo cada año.</div>
           </div>
           <div class="pregunta">
-            <button>¿Qué formas de pago aceptan? <span>+</span></button>
+            <button>¿Qué formas de pago aceptan? <i class="fa-solid fa-plus"></i></button>
             <div class="respuesta">Aceptamos efectivo, tarjeta de débito y crédito y transferencia.</div>
           </div>
           <div class="pregunta">
-            <button>¿Atienden otras especies además de perros y gatos? <span>+</span></button>
+            <button>¿Atienden otras especies además de perros y gatos? <i class="fa-solid fa-plus"></i></button>
             <div class="respuesta">Por ahora solo atendemos perros y gatos, pero con gusto te recomendamos una clínica de especies exóticas.</div>
           </div>
         </div>
@@ -168,11 +169,11 @@
       </div>
     </div>
     <div class="contenedor pie-final">
-      © <span class="anio"></span> Huellitas · Sitio hecho por Carlos Becerra Zúñiga · 00519126
+      © 2026 Huellitas · Carlos Becerra Zúñiga · 00519126
     </div>
   </footer>
 
-  <button id="btn-arriba" aria-label="Ir arriba">↑</button>
+  <button id="btn-arriba" aria-label="Ir arriba"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/principal.js"></script>
