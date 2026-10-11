@@ -320,7 +320,15 @@ h1, h2, h3, .logo {
   gap: 40px;
   align-items: center;
 }
-.dos-columnas img { border-radius: var(--radio); box-shadow: var(--sombra); }
+.foto-historia img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+.foto-historia figcaption { font-size: 0.75rem; color: var(--texto-suave); margin-top: 6px; }
 .dos-columnas p { margin-bottom: 12px; color: var(--texto-suave); }
 
 .avatar {

@@ -49,6 +49,10 @@ huellitas-veterinaria/
 └── img/
 ```
 
+## Créditos
+
+La foto de la página de nosotros es de Veterinarian Pet Alliance, publicada en Wikimedia Commons con licencia CC BY 4.0.
+
 ## Cómo verlo
 
 Descarga o clona el repositorio y abre `index.html` en el navegador. jQuery, bxSlider, Leaflet y Font Awesome se cargan por CDN, así que se necesita internet.
