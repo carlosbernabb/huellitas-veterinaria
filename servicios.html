@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicios y precios de Huellitas Clínica Veterinaria.">
+  <title>Servicios | Huellitas</title>
+  <link rel="icon" href="img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="barra-superior">
+      <div class="contenedor">
+        <span id="fecha-hora">Cargando fecha...</span>
+        <span>Urgencias 24 horas · 442 215 3080</span>
+      </div>
+    </div>
+    <nav class="nav contenedor">
+      <a href="index.html" class="logo"><img src="img/logo.svg" alt="Logo de Huellitas"><b>Huell<span>itas</span></b></a>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html" class="activo">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="acciones-nav">
+        <button id="btn-tema" class="btn-icono" aria-label="Cambiar tema">🌙</button>
+        <button class="btn-icono menu-toggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner-pagina">
+      <div class="contenedor">
+        <h1>Servicios</h1>
+        <p>Todo lo que tu mascota necesita en un solo lugar, con precios claros.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <!-- Buscador y filtros -->
+        <div class="herramientas">
+          <input type="search" id="buscador" class="buscador" placeholder="Busca un servicio, por ejemplo vacuna">
+          <div class="filtros">
+            <button class="filtro activo" data-categoria="todos">Todos</button>
+            <button class="filtro" data-categoria="salud">Salud</button>
+            <button class="filtro" data-categoria="estetica">Estética</button>
+            <button class="filtro" data-categoria="urgencias">Urgencias</button>
+          </div>
+        </div>
+        <p id="total-servicios" class="ayuda"></p>
+
+        <div class="rejilla" id="lista-servicios">
+          <article class="tarjeta servicio" data-categoria="salud">
+            <div class="icono">🩺</div>
+            <h3>Consulta general</h3>
+            <p>Revisión completa de peso, temperatura, corazón, piel, ojos y oídos.</p>
+            <p class="precio">$350</p>
+          </article>
+          <article class="tarjeta servicio" data-categoria="salud">
+            <div class="icono">💉</div>
+            <h3>Vacunación</h3>
+            <p>Vacuna múltiple, antirrábica y triple felina con registro en cartilla.</p>
+            <p class="precio">Desde $280</p>
+          </article>
+          <article class="tarjeta servicio" data-categoria="salud">
+            <div class="icono">🪱</div>
+            <h3>Desparasitación</h3>
+            <p>Interna y externa según el peso y la edad de tu mascota.</p>
+            <p class="precio">Desde $150</p>
+          </article>
+          <article class="tarjeta servicio" data-categoria="salud">
+            <div class="icono">🔬</div>
+            <h3>Laboratorio</h3>
+            <p>Análisis de sangre, orina y heces con resultados el mismo día.</p>
+            <p class="precio">Desde $420</p>
+          </article>
+          <article class="tarjeta servicio" data-categoria="salud">
+            <div class="icono">✂️</div>
+            <h3>Esterilización</h3>
+            <p>Cirugía con anestesia inhalada, monitoreo y collar isabelino incluido.</p>
+            <p class="precio">Desde $1,200</p>
+          </article>
+          <article class="tarjeta servicio" data-categoria="estetica">
+            <div class="icono">🛁</div>
+            <h3>Baño y secado</h3>
+            <p>Shampoo especial según su tipo de pelo, limpieza de oídos y perfume.</p>
+            <p class="precio">Desde $220</p>
+          </article>
+          <article class="tarjeta servicio" data-categoria="estetica">
+            <div class="icono">💇</div>
+            <h3>Corte de pelo</h3>
+            <p>Corte por raza o a tu gusto, incluye corte de uñas.</p>
+            <p class="precio">Desde $300</p>
+          </article>
+          <article class="tarjeta servicio" data-categoria="urgencias">
+            <div class="icono">🚑</div>
+            <h3>Urgencias</h3>
+            <p>Atención inmediata las 24 horas para accidentes, intoxicaciones y golpes.</p>
+            <p class="precio">Desde $600</p>
+          </article>
+          <article class="tarjeta servicio" data-categoria="urgencias">
+            <div class="icono">🏨</div>
+            <h3>Hospitalización</h3>
+            <p>Cuidado y monitoreo por día con médico de guardia toda la noche.</p>
+            <p class="precio">$750 por día</p>
+          </article>
+        </div>
+        <p class="sin-resultados" id="sin-resultados">No encontramos ese servicio, prueba con otra palabra.</p>
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes con acordeón jQuery -->
+    <section class="seccion seccion-alt">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="etiqueta">Dudas</span>
+          <h2>Preguntas frecuentes</h2>
+        </div>
+        <div class="acordeon">
+          <div class="pregunta">
+            <button>¿Necesito cita para la consulta? <span>+</span></button>
+            <div class="respuesta">No es obligatorio, pero con cita te atendemos sin esperar. Puedes pedirla por teléfono o desde la página de contacto.</div>
+          </div>
+          <div class="pregunta">
+            <button>¿Cada cuánto debo vacunar a mi mascota? <span>+</span></button>
+            <div class="respuesta">Los cachorros llevan varias dosis en sus primeros meses y después basta con un refuerzo cada año.</div>
+          </div>
+          <div class="pregunta">
+            <button>¿Qué formas de pago aceptan? <span>+</span></button>
+            <div class="respuesta">Aceptamos efectivo, tarjeta de débito y crédito y transferencia.</div>
+          </div>
+          <div class="pregunta">
+            <button>¿Atienden otras especies además de perros y gatos? <span>+</span></button>
+            <div class="respuesta">Por ahora solo atendemos perros y gatos, pero con gusto te recomendamos una clínica de especies exóticas.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-grid">
+      <div>
+        <h3>Huellitas Clínica Veterinaria</h3>
+        <p>Atención médica para perros y gatos en el centro de Querétaro desde 2014.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horario</h3>
+        <p>Lunes a sábado de 9:00 a 20:00</p>
+        <p>Domingo de 10:00 a 14:00</p>
+        <p>Urgencias 24 horas</p>
+      </div>
+    </div>
+    <div class="contenedor pie-final">
+      © <span class="anio"></span> Huellitas · Sitio hecho por Carlos Becerra Zúñiga · 00519126
+    </div>
+  </footer>
+
+  <button id="btn-arriba" aria-label="Ir arriba">↑</button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/principal.js"></script>
+  <script src="js/servicios.js"></script>
+</body>
+</html>
