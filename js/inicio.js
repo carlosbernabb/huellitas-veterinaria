@@ -1,111 +1,88 @@
-/* ===========================================================
-   inicio.js
-   Slider con bxSlider, contadores y calculadora de edad
-   =========================================================== */
-
 $(function () {
 
-  // Plugin bxSlider para el carrusel principal
+  // Slider
   $('.slider-principal').bxSlider({
     auto: true,
     pause: 5000,
-    speed: 700,
     mode: 'fade',
-    controls: true,
-    pager: true,
     autoHover: true,
-    adaptiveHeight: true,
     touchEnabled: false
   });
 
-  // Contadores que suben desde cero cuando aparecen en pantalla
-  let contadoresIniciados = false;
+  // Contadores
+  let yaContaron = false;
 
-  function iniciarContadores() {
-    $('.contador').each(function () {
-      const $contador = $(this);
-      const final = parseInt($contador.data('final'), 10);
+  $(window).on('scroll', function () {
+    const inicioContadores = $('.contadores').offset().top - $(window).height();
 
-      $({ valor: 0 }).animate({ valor: final }, {
-        duration: 2000,
-        easing: 'swing',
-        step: function () {
-          $contador.text(Math.floor(this.valor).toLocaleString('es-MX'));
-        },
-        complete: function () {
-          $contador.text(final.toLocaleString('es-MX'));
-        }
+    if (!yaContaron && $(window).scrollTop() > inicioContadores) {
+      yaContaron = true;
+
+      $('.contador').each(function () {
+        const $numero = $(this);
+        const final = $numero.data('final');
+
+        $({ valor: 0 }).animate({ valor: final }, {
+          duration: 2000,
+          step: function () {
+            $numero.text(Math.floor(this.valor));
+          },
+          complete: function () {
+            $numero.text(final);
+          }
+        });
       });
-    });
-  }
-
-  $(window).on('scroll load', function () {
-    const posicion = $('.contadores').offset().top - $(window).height() + 80;
-    if (!contadoresIniciados && $(window).scrollTop() > posicion) {
-      contadoresIniciados = true;
-      iniciarContadores();
     }
   });
 
-  // El tamaño solo aplica para perros, para gatos se oculta
+  // El tamaño solo aplica para perros
   $('#especie').on('change', function () {
     if ($(this).val() === 'gato') {
-      $('#campo-tamano').slideUp(200);
+      $('#campo-tamano').slideUp();
     } else {
-      $('#campo-tamano').slideDown(200);
+      $('#campo-tamano').slideDown();
     }
   });
 
-  // Calculadora de edad en años humanos
-  $('#form-edad').on('submit', function (evento) {
-    evento.preventDefault();
+  // Calculadora de edad
+  $('#form-edad').on('submit', function (e) {
+    e.preventDefault();
 
     const especie = $('#especie').val();
     const tamano = $('#tamano').val();
-    const edad = parseFloat($('#edad').val());
-    const $resultado = $('#resultado-edad');
+    const edad = Number($('#edad').val());
 
-    if (isNaN(edad) || edad < 1 || edad > 25) {
+    if (edad < 1 || edad > 25) {
       $('#error-edad').text('Escribe una edad entre 1 y 25 años.');
-      $resultado.slideUp(200);
+      $('#resultado-edad').slideUp();
       return;
     }
+
     $('#error-edad').text('');
 
-    const humana = calcularEdadHumana(especie, tamano, edad);
-    const etapa = obtenerEtapa(humana);
-    const nombre = especie === 'perro' ? 'Tu perro' : 'Tu gato';
+    let porAnio = 4;
+    if (especie === 'perro' && tamano === 'mediano') porAnio = 5;
+    if (especie === 'perro' && tamano === 'grande') porAnio = 7;
 
-    // Se crea el contenido del resultado y se muestra con un efecto
-    $resultado.hide().html(
-      nombre + ' tiene aproximadamente<br><strong>' + humana + ' años humanos</strong><br>Etapa de vida: ' + etapa
-    ).fadeIn(400);
+    let edadHumana;
+    if (edad === 1) {
+      edadHumana = 15;
+    } else if (edad === 2) {
+      edadHumana = 24;
+    } else {
+      edadHumana = 24 + (edad - 2) * porAnio;
+    }
+
+    let etapa = 'joven';
+    if (edadHumana >= 25) etapa = 'adulto';
+    if (edadHumana >= 50) etapa = 'adulto maduro';
+    if (edadHumana >= 70) etapa = 'senior';
+
+    let nombre = 'Tu perro';
+    if (especie === 'gato') nombre = 'Tu gato';
+
+    $('#resultado-edad').hide().html(
+      nombre + ' tiene aproximadamente<br><strong>' + edadHumana + ' años humanos</strong><br>Etapa de vida: ' + etapa
+    ).fadeIn();
   });
 });
-
-// Calcula la edad equivalente, el primer año cuenta como 15 y el segundo como 9
-function calcularEdadHumana(especie, tamano, edad) {
-  let porAnio = 4;
-  if (especie === 'perro') {
-    if (tamano === 'mediano') porAnio = 5;
-    if (tamano === 'grande') porAnio = 7;
-  }
-
-  let total;
-  if (edad <= 1) {
-    total = 15 * edad;
-  } else if (edad <= 2) {
-    total = 15 + 9 * (edad - 1);
-  } else {
-    total = 24 + (edad - 2) * porAnio;
-  }
-  return Math.round(total);
-}
-
-// Regresa la etapa de vida según la edad humana
-function obtenerEtapa(edadHumana) {
-  if (edadHumana < 25) return 'joven 🐾';
-  if (edadHumana < 50) return 'adulto 💪';
-  if (edadHumana < 70) return 'adulto maduro 🧡';
-  return 'senior, necesita revisiones más seguido 👴';
-}
