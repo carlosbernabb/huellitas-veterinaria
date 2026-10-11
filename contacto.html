@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto y ubicación de Huellitas Clínica Veterinaria en Querétaro.">
+  <title>Contacto | Huellitas</title>
+  <link rel="icon" href="img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <!-- Leaflet para el mapa interactivo -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="barra-superior">
+      <div class="contenedor">
+        <span id="fecha-hora">Cargando fecha...</span>
+        <span>Urgencias 24 horas · 442 215 3080</span>
+      </div>
+    </div>
+    <nav class="nav contenedor">
+      <a href="index.html" class="logo"><img src="img/logo.svg" alt="Logo de Huellitas"><b>Huell<span>itas</span></b></a>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+      <div class="acciones-nav">
+        <button id="btn-tema" class="btn-icono" aria-label="Cambiar tema">🌙</button>
+        <button class="btn-icono menu-toggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner-pagina">
+      <div class="contenedor">
+        <h1>Contacto</h1>
+        <p>Escríbenos para agendar una cita o resolver cualquier duda.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor contacto-grid">
+        <!-- Formulario validado con JavaScript -->
+        <form id="form-contacto" class="tarjeta" novalidate>
+          <h2 class="titulo-calc">Envíanos un mensaje</h2>
+          <div class="aviso-exito" id="aviso-exito"></div>
+
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
+            <div class="mensaje-error"></div>
+          </div>
+          <div class="campo">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com">
+            <div class="mensaje-error"></div>
+          </div>
+          <div class="campo">
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto">
+              <option value="">Elige una opción</option>
+              <option value="Agendar cita">Agendar cita</option>
+              <option value="Duda sobre un servicio">Duda sobre un servicio</option>
+              <option value="Cotización">Cotización</option>
+              <option value="Otro">Otro</option>
+            </select>
+            <div class="mensaje-error"></div>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" maxlength="400" placeholder="Cuéntanos cómo podemos ayudarte"></textarea>
+            <div class="ayuda"><span id="contador-caracteres">0</span> de 400 caracteres</div>
+            <div class="mensaje-error"></div>
+          </div>
+          <button type="submit" class="boton">Enviar mensaje</button>
+        </form>
+
+        <!-- Datos y mapa -->
+        <div class="datos-contacto">
+          <div class="dato">
+            <div class="icono">📍</div>
+            <div><strong>Dirección</strong><p>Av. Zaragoza 215, Centro, Santiago de Querétaro</p></div>
+          </div>
+          <div class="dato">
+            <div class="icono">📞</div>
+            <div><strong>Teléfono</strong><p>442 215 3080</p></div>
+          </div>
+          <div class="dato">
+            <div class="icono">✉️</div>
+            <div><strong>Correo</strong><p>hola@huellitasvet.mx</p></div>
+          </div>
+          <div id="mapa" aria-label="Mapa con la ubicación de la clínica"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-grid">
+      <div>
+        <h3>Huellitas Clínica Veterinaria</h3>
+        <p>Atención médica para perros y gatos en el centro de Querétaro desde 2014.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Horario</h3>
+        <p>Lunes a sábado de 9:00 a 20:00</p>
+        <p>Domingo de 10:00 a 14:00</p>
+        <p>Urgencias 24 horas</p>
+      </div>
+    </div>
+    <div class="contenedor pie-final">
+      © <span class="anio"></span> Huellitas · Sitio hecho por Carlos Becerra Zúñiga · 00519126
+    </div>
+  </footer>
+
+  <button id="btn-arriba" aria-label="Ir arriba">↑</button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/principal.js"></script>
+  <script src="js/contacto.js"></script>
+</body>
+</html>
